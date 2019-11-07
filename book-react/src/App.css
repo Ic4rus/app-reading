@@ -20,3 +20,11 @@
 .App-link {
   color: #09d3ac;
 }
+
+.app-container {
+  display: flex;
+}
+
+.page-container {
+  width: 100vw;
+}
