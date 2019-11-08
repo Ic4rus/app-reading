@@ -23,8 +23,9 @@
 
 .app-container {
   display: flex;
+  width: 100%;
 }
 
 .page-container {
-  width: 100vw;
+  width: 100%;
 }
