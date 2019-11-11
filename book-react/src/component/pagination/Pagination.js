@@ -1,33 +1,49 @@
 import React, { Component } from 'react';
 import './Pagination.css';
 import ic_up_arrow from '../../asset/ic_up_arrow.svg';
-import ic_up_arrows from '../../asset/ic_up_arrows.svg';
 import ic_down_arrow from '../../asset/ic_down_arrow.svg';
-import ic_down_arrows from '../../asset/ic_down_arrows.svg';
 
 class Pagination extends Component {
+  onChangePage = page => {
+    this.props.onChangePage(page);
+  };
+
   render() {
-    // const max = 15;
-    // const current = 5;
-    // const first = current < 5 ? true : false;
-    // const last = max - current > 3 ? true : false;
-    // const items;
-    // if (first) {
-    //   items = [1, 2, 3, 4, 5];
-    // }
+    const { currentPage } = this.props;
+    const min = 1;
+    const max = 15;
+    const range = 3;
+    const current = currentPage;
+    const start =
+      (Math.floor(current / range) +
+        Math.floor(((current % range) * 2) / range)) *
+        range -
+      Math.floor(range / 2);
+    const pages = [min];
+    if (current > min + range) {
+      pages.push('...');
+    }
+
+    for (let i = start; i < start + range; i++) {
+      pages.push(i);
+    }
+
+    if (current < max - range) {
+      pages.push('...');
+    }
+    pages.push(max);
 
     return (
       <div className="pagination-container">
         <span>
           <img src={ic_up_arrow} />
         </span>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>...</span>
-        <span>100</span>
-        <span>
+        {pages.map((page, index) => (
+          <span key={index} onClick={() => this.onChangePage(page)}>
+            {page}
+          </span>
+        ))}
+        <span onClick={() => this.onChangePage(current + 1)}>
           <img src={ic_down_arrow} />
         </span>
       </div>

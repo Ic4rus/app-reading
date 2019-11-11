@@ -1,26 +1,8 @@
 import React, { Component } from 'react';
 import Pagination from '../../component/pagination/Pagination';
-import cover from '../../asset/cover.jpeg';
 import './Home.css';
 import * as RouteMap from '../../constants/RouteMap';
-
-const bookList = [
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' },
-  { name: 'Java 8 in Action' }
-];
+import * as Dummy from '../../dummy/Dummy';
 
 const menuItems = [
   { name: 'New', route: RouteMap.ROUTE_LIST_NEW },
@@ -29,7 +11,21 @@ const menuItems = [
 ];
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPage: 1
+    };
+  }
+
   handleChangeMenu = key => (window.location.href = `#${key}`);
+
+  onChangePage = page => {
+    this.setState({
+      currentPage: page
+    });
+  };
+
   render() {
     const { location } = this.props;
     return (
@@ -51,10 +47,10 @@ class Home extends Component {
             ))}
           </div>
           <div className="book-list">
-            {bookList.map((book, index) => {
+            {Dummy.BOOK_LIST.map((book, index) => {
               return (
                 <div className="book-item" key={index}>
-                  <img src={cover} className="book-image" />
+                  <img src={book.imageUrl} className="book-image" />
                   <div className="book-info">
                     <span className="book-name">{book.name}</span>
                     <div className="book-chapter">
@@ -67,7 +63,10 @@ class Home extends Component {
             })}
           </div>
         </div>
-        <Pagination />
+        <Pagination
+          currentPage={this.state.currentPage}
+          onChangePage={this.onChangePage}
+        />
       </div>
     );
   }
