@@ -16,7 +16,7 @@
 logging:
     level:
         ROOT: INFO
-        com.icarus.reading.api: INFO
+        com.icarus.reading: INFO
         io.github.jhipster: INFO
 
 spring:
@@ -111,7 +111,7 @@ jhipster:
                 # - In the JHipster Registry (which includes a Spring Cloud Config server)
                 # - In a separate `application-prod.yml` file, in the same folder as your executable WAR file
                 # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-                base64-secret: YjhlN2Y5MGI4ZTU1MTBmZWQ4Yjc5MmM2M2VhMzA1ZmFmMmYwMjlhZThkZmZhYmI1YTRiMmVlN2ZlM2M4MzM2NGI0YWFjYmI4YmYwOGFhMmI0MDlmZWYzMmQ1MzVkMjA0Yzk2ODFkZmE1NDgzYjM3NGQzZDA5MzdkNDU2ZmQyNWQ=
+                base64-secret: MmQ1NTY0MDUxNTc5ODZkZDg4YWY2N2FmMzliMTQ0NGU3MmU0NGFlZWQyYTU1OTg0YWY2MDBlYWZlY2Y3OTgzYjE1YjQzOWU2Mjk4NGFhMzJiNTkyNDkyNDU5MzY1ODgyYmMyZWY3ZTRjZWVlODg4MGJjZDEwZGI4NWM4Yzg5OGY=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
