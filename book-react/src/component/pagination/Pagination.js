@@ -7,14 +7,14 @@ import ic_down_arrows from '../../asset/ic_down_arrows.svg';
 
 class Pagination extends Component {
   render() {
-    const max = 15;
-    const current = 5;
-    const first = current < 5 ? true : false;
-    const last = max - current > 3 ? true : false;
-    const items;
-    if (first) {
-      items = [1, 2, 3, 4, 5];
-    }
+    // const max = 15;
+    // const current = 5;
+    // const first = current < 5 ? true : false;
+    // const last = max - current > 3 ? true : false;
+    // const items;
+    // if (first) {
+    //   items = [1, 2, 3, 4, 5];
+    // }
 
     return (
       <div className="pagination-container">

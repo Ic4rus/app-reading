@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.icarus.reading.api",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "api",
+    "packageName": "com.icarus.reading.api",
+    "packageFolder": "com/icarus/reading/api",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YjhlN2Y5MGI4ZTU1MTBmZWQ4Yjc5MmM2M2VhMzA1ZmFmMmYwMjlhZThkZmZhYmI1YTRiMmVlN2ZlM2M4MzM2NGI0YWFjYmI4YmYwOGFhMmI0MDlmZWYzMmQ1MzVkMjA0Yzk2ODFkZmE1NDgzYjM3NGQzZDA5MzdkNDU2ZmQyNWQ=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "vi"
+    ]
+  }
+}
