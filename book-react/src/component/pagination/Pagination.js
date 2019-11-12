@@ -13,7 +13,12 @@ class Pagination extends Component {
     const min = 1;
     const max = 15;
     const range = 3;
-    const current = currentPage;
+    const current =
+      currentPage == min
+        ? currentPage + 1
+        : currentPage == max
+        ? currentPage - 1
+        : currentPage;
     const start =
       (Math.floor(current / range) +
         Math.floor(((current % range) * 2) / range)) *
@@ -34,7 +39,7 @@ class Pagination extends Component {
     pages.push(max);
 
     return (
-      <div className="pagination-container">
+      <div className='pagination-container'>
         <span>
           <img src={ic_up_arrow} />
         </span>

@@ -8,7 +8,7 @@
 .book-container {
   width: 100%;
   height: 100%;
-  background: #b3cde0;
+  background: #ecf0f2;
   box-sizing: border-box;
 }
 
@@ -50,8 +50,13 @@
 }
 
 .book-image {
-  width: 75px;
+  width: 80px;
+  min-width: 80px;
   height: 100%;
+  background: #fff;
+  border: 1px solid #dadada;
+  padding: 3px;
+  border-radius: 4px;
 }
 
 .book-info {
@@ -65,12 +70,15 @@
 .book-name {
   width: 100%;
   height: 36px;
-  font-weight: bold;
-  font-size: 18px;
+  line-height: 36px;
+  min-height: 36px;
+  font-weight: 700;
+  font-size: 14px;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   margin-left: 16px;
+  color: #4183d7;
 }
 
 .book-chapter {
@@ -79,9 +87,10 @@
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 12px;
   justify-content: center;
   margin-left: 16px;
+  color: #003555;
 }
 
 .book-chapter > span {

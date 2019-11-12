@@ -29,9 +29,9 @@ class Home extends Component {
   render() {
     const { location } = this.props;
     return (
-      <div className="home-container">
-        <div className="book-container">
-          <div className="book-menu">
+      <div className='home-container'>
+        <div className='book-container'>
+          {/* <div className="book-menu">
             {menuItems.map((menuItem, index) => (
               <span
                 className={
@@ -45,15 +45,15 @@ class Home extends Component {
                 {menuItem.name}
               </span>
             ))}
-          </div>
-          <div className="book-list">
+          </div> */}
+          <div className='book-list'>
             {Dummy.BOOK_LIST.map((book, index) => {
               return (
-                <div className="book-item" key={index}>
-                  <img src={book.imageUrl} className="book-image" />
-                  <div className="book-info">
-                    <span className="book-name">{book.name}</span>
-                    <div className="book-chapter">
+                <div className='book-item' key={index}>
+                  <img src={book.imageUrl} className='book-image' />
+                  <div className='book-info'>
+                    <span className='book-name'>{book.name}</span>
+                    <div className='book-chapter'>
                       <span>Chương 2</span>
                       <span>Chương 1</span>
                     </div>
