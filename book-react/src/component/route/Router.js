@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Switch, Redirect, Route } from 'react-router-dom';
+import { Switch, Redirect, Route } from 'react-router-dom';
 import * as RouteMap from '../../constants/RouteMap';
 import Home from '../../page/home/Home';
 

@@ -1,28 +1,37 @@
 .pagination-container {
-  width: 40px;
+  width: 48px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.pagination-container > span {
-  width: 32px;
-  height: 32px;
+.page-number {
+  width: 24px;
+  height: 24px;
   margin-bottom: 8px;
-  border-radius: 4px;
+  border-radius: 16px;
   text-align: center;
-  line-height: 32px;
-  color: #2b333d;
+  line-height: 24px;
+  color: #4183d7;
   cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-.pagination-container > span:hover {
-  background: wheat;
+.page-number:hover {
+  background: #4875a4;
+  color: #fff;
   transition: all 0.5s;
 }
 
-.pagination-container > span > img {
+.page-number-active {
+  background: #4875a4;
+  color: #fff;
+}
+
+.page-number > img {
   width: 12px;
   height: 12px;
 }

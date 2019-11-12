@@ -38,6 +38,7 @@ public class CacheConfiguration {
             cm.createCache(com.icarus.reading.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.icarus.reading.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.icarus.reading.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.icarus.reading.domain.Book.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

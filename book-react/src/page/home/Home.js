@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Pagination from '../../component/pagination/Pagination';
 import './Home.css';
-import * as RouteMap from '../../constants/RouteMap';
+// import * as RouteMap from '../../constants/RouteMap';
 import * as Dummy from '../../dummy/Dummy';
 
-const menuItems = [
-  { name: 'New', route: RouteMap.ROUTE_LIST_NEW },
-  { name: 'Hot', route: RouteMap.ROUTE_LIST_HOT },
-  { name: 'Most', route: RouteMap.ROUTE_LIST_MOST }
-];
+// const menuItems = [
+//   { name: 'New', route: RouteMap.ROUTE_LIST_NEW },
+//   { name: 'Hot', route: RouteMap.ROUTE_LIST_HOT },
+//   { name: 'Most', route: RouteMap.ROUTE_LIST_MOST }
+// ];
 
 class Home extends Component {
   constructor(props) {
@@ -27,10 +27,10 @@ class Home extends Component {
   };
 
   render() {
-    const { location } = this.props;
+    // const { location } = this.props;
     return (
-      <div className='home-container'>
-        <div className='book-container'>
+      <div className="home-container secondary-background">
+        <div className="book-container">
           {/* <div className="book-menu">
             {menuItems.map((menuItem, index) => (
               <span
@@ -46,14 +46,14 @@ class Home extends Component {
               </span>
             ))}
           </div> */}
-          <div className='book-list'>
+          <div className="book-list">
             {Dummy.BOOK_LIST.map((book, index) => {
               return (
-                <div className='book-item' key={index}>
-                  <img src={book.imageUrl} className='book-image' />
-                  <div className='book-info'>
-                    <span className='book-name'>{book.name}</span>
-                    <div className='book-chapter'>
+                <div className="book-item" key={index}>
+                  <img src={book.imageUrl} className="book-image" alt="" />
+                  <div className="book-info">
+                    <span className="book-name">{book.name}</span>
+                    <div className="book-chapter">
                       <span>Chương 2</span>
                       <span>Chương 1</span>
                     </div>

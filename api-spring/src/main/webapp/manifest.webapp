@@ -1,6 +1,6 @@
 {
-  "name": "api",
-  "short_name": "api",
+  "name": "Api",
+  "short_name": "Api",
   "icons": [
       {
           "src": "./content/images/jhipster_family_member_2_head-192.png",
